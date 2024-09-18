@@ -156,6 +156,43 @@ h1 {
   }
 }
 
+.about-section, .projects-section, .events-section, .join-section, .contact-section {
+    padding: 100px 30px;
+    text-align: center;
+}
+
+.about-section .team {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.about-section .member {
+    text-align: center;
+    margin: 20px;
+}
+
+.about-section .member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 @media (max-width: 768px) {
   .nav-links {
       display: none;
