@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Iosevka;
+  src: url(assets/IosevkaNerdFont-Regular.ttf);
+}
+
 :root {
   --primary-color: #1864c1;
   --secondary-color: #11498e;
@@ -6,7 +11,7 @@
 }
 
 body {
-  font-family: 'Iosevka NFM';
+  font-family: 'Iosevka';
   background-color: var(--background-color);
   color: var(--text-color);
   margin: 0;
@@ -162,21 +167,42 @@ h1 {
 }
 
 .about-section .team {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 40px;
+  justify-content: center;
 }
 
-.about-section .member {
-    text-align: center;
-    margin: 20px;
+.member-card {
+  padding: 20px;
+  background-color: var(--background-color);
+  border: 2px solid var(--secondary-color);
+  border-radius: 20px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  max-width: 100%;
 }
 
-.about-section .member img {
+
+.member-card:nth-of-type(1) {
+  grid-column: 1 / -1; 
+  justify-self: center;
+}
+
+.member-card img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     margin-bottom: 10px;
+}
+
+.member-card h3 {
+    margin: 10px 0;
+    color: var(--primary-color);
+}
+
+.member-card:hover {
+    box-shadow: 0 0 20px 10px var(--secondary-color);
 }
 
 h2 {
@@ -194,15 +220,20 @@ html {
 }
 
 @media (max-width: 768px) {
-  .nav-links {
-      display: none;
-  }
+    .nav-links {
+        display: none;
+    }
 
-  h1 {
-      font-size: 3rem;
-  }
+    h1 {
+        font-size: 3rem;
+    }
 
-  .hero p {
-      font-size: 1.2rem;
-  }
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .member-card {
+        width: 80%;
+    }
+
 }
