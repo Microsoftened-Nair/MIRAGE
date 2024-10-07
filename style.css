@@ -170,6 +170,7 @@ h1 {
 .team {
   display: flex;
   flex-direction: column;
+  align-items:  center;
   gap: 20px;
 }
 
@@ -243,5 +244,20 @@ html {
     .member-card {
         width: 80%;
     }
+ 
+}
+@media (max-width: 970px) {
+  .team .core_team, .team .president{
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+}
 
+
+@media (max-width: 480px) {
+  #members{
+    min-width: 100%;
+  }
 }
