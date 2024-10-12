@@ -1,4 +1,4 @@
-// Create floating VR elements
+
 const vrElements = document.querySelector('.vr-elements');
 const numElements = 20;
 
